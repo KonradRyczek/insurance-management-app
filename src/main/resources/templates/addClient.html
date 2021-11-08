@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/layout">
+
+<head>
+</head>
+
+<body>
+<form action="#" th:action="@{/addClient}" th:object="${client}" method="post">
+    <div>
+        <div style="padding: 10px">
+            <label>FirstName:</label>
+            <input type="text" class="form-control" th:field="*{firstName}"/>
+        </div>
+        <div style="padding: 10px">
+            <label>LastName:</label>
+            <input type="text" class="form-control" th:field="*{lastName}"/>
+        </div>
+        <div style="padding: 10px">
+            <label>Email:</label>
+            <input type="text" class="form-control" th:field="*{email}"/>
+        </div>
+    </div>
+
+    <button type="submit">Add Client</button>
+</form>
+</body>
+
+</html>
