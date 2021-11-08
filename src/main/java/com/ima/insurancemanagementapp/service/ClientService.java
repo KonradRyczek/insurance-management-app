@@ -22,7 +22,7 @@ public class ClientService {
     public Client addClient(Client clientToAdd) {
         Client client = getClient(clientToAdd.getEmail());
         if (client == null) {
-            return clientRepository.save(client);
+            return clientRepository.save(clientToAdd);
         }
         return null; //this client already exists
     }

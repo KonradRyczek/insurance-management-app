@@ -18,7 +18,7 @@ public class ClientController {
         this.clientService = clientService;
     }
 
-    @GetMapping("/clients")
+    @GetMapping("/clientsList")
     public String showListAllClients(Model model){
         ArrayList<Client> clients = clientService.getAllClients();
         model.addAttribute("clients", clients);
@@ -32,10 +32,10 @@ public class ClientController {
     }
 
     @PostMapping(value = "/addClient")
-    public String saveStudent(Client client) {
-        System.out.println("DASD");
+    public void saveStudent(Client client) {
+        System.out.println("/addClient");
         System.out.println(client);
         clientService.addClient(client);
-        return "done";
+        //return "clientsList"; nie działa, trzeba zrobić przekierowanie do listy klientów
     }
 }

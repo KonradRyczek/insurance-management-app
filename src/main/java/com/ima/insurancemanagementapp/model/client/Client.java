@@ -2,6 +2,7 @@ package com.ima.insurancemanagementapp.model.client;
 
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -32,7 +33,8 @@ public class Client {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = true)
+    @Column
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate driverLicenseIssueDate;
 
     public Client(String firstName, String lastName, String email, LocalDate driverLicenseIssueDate) {

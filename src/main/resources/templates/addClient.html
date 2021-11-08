@@ -9,16 +9,20 @@
 <form action="#" th:action="@{/addClient}" th:object="${client}" method="post">
     <div>
         <div style="padding: 10px">
-            <label>FirstName:</label>
-            <input type="text" class="form-control" th:field="*{firstName}"/>
+            <label>Imię:</label>
+            <input type="text" class="form-control" th:field="*{firstName}" required/>
         </div>
         <div style="padding: 10px">
-            <label>LastName:</label>
-            <input type="text" class="form-control" th:field="*{lastName}"/>
+            <label>Nazwisko:</label>
+            <input type="text" class="form-control" th:field="*{lastName}" required/>
         </div>
         <div style="padding: 10px">
             <label>Email:</label>
-            <input type="text" class="form-control" th:field="*{email}"/>
+            <input type="text" class="form-control" th:field="*{email}" required/>
+        </div>
+        <div style="padding: 10px">
+            <label>Data wydania prawa jazdy:</label>
+            <input type="date" class="form-control" th:field="*{driverLicenseIssueDate}" required/>
         </div>
     </div>
 
