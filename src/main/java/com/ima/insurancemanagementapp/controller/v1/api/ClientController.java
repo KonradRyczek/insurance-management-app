@@ -6,6 +6,7 @@ import com.ima.insurancemanagementapp.service.ClientService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 
@@ -22,20 +23,31 @@ public class ClientController {
     public String showListAllClients(Model model){
         ArrayList<Client> clients = clientService.getAllClients();
         model.addAttribute("clients", clients);
+
+        model.addAttribute("client", new Client());
+
         return "clientsList";
     }
 
-    @GetMapping(value = "/addClient")
-    public String addStudent(Model model) {
-        model.addAttribute("client", new Client());
-        return "addClient";
+
+
+    @PostMapping("/clientsList")
+    public ModelAndView saveStudent(Client client){
+        clientService.addClient(client);
+        return new ModelAndView("redirect:/clientsList");
     }
 
-    @PostMapping(value = "/addClient")
-    public void saveStudent(Client client) {
-        System.out.println("/addClient");
-        System.out.println(client);
-        clientService.addClient(client);
-        //return "clientsList"; nie działa, trzeba zrobić przekierowanie do listy klientów
-    }
+//    @GetMapping(value = "/addClient")
+//    public String addStudent(Model model) {
+//        model.addAttribute("client", new Client());
+//        return "addClient";
+//    }
+
+//    @PostMapping(value = "/addClient")
+//    public void saveStudent(Client client) {
+//        System.out.println("/addClient");
+//        System.out.println(client);
+//        clientService.addClient(client);
+//        //return "clientsList"; nie działa, trzeba zrobić przekierowanie do listy klientów
+//    }
 }

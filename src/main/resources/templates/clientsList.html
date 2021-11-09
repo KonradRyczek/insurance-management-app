@@ -27,8 +27,34 @@
             <td th:text="${client.lastName}"/>
             <td th:text="${client.email}"/>
             <td th:text="${client.driverLicenseIssueDate}"/>
+<!--            TODO                    -->
+<!--            <td button update/>     -->
+<!--            <td button delete/>     -->
         </tr>
         </tbody>
     </table>
+
+    <form action="#" th:action="@{/clientsList}" th:object="${client}" method="post">
+        <div>
+            <div style="padding: 10px">
+                <label>Imię:</label>
+                <input type="text" class="form-control" th:field="*{firstName}" required/>
+            </div>
+            <div style="padding: 10px">
+                <label>Nazwisko:</label>
+                <input type="text" class="form-control" th:field="*{lastName}" required/>
+            </div>
+            <div style="padding: 10px">
+                <label>Email:</label>
+                <input type="text" class="form-control" th:field="*{email}" required/>
+            </div>
+            <div style="padding: 10px">
+                <label>Data wydania prawa jazdy:</label>
+                <input type="date" class="form-control" th:field="*{driverLicenseIssueDate}" required/>
+            </div>
+        </div>
+
+        <button type="submit">Add Client</button>
+    </form>
 </body>
 </html>

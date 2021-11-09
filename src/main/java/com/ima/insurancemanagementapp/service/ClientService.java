@@ -5,6 +5,7 @@ import com.ima.insurancemanagementapp.repository.client.ClientRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class ClientService {
@@ -27,7 +28,26 @@ public class ClientService {
         return null; //this client already exists
     }
 
-    // TODO public Client updateClient()
+    public Client deleteClient(String email) {
+        Client client = getClient(email);
+        if (client != null) {
+            return clientRepository.deleteClientBy(client.getEmail());
+        }
+        return null;
+    }
+
+    public Client updateClient(String email, Client newClient) {
+        Optional<Client> client = Optional.ofNullable(clientRepository.findByEmail(email));
+        if (client.isPresent()) {
+            Client clientModel = client.get();
+            clientModel.setFirstName(newClient.getFirstName())
+                    .setLastName(newClient.getLastName())
+                    .setEmail(newClient.getEmail())
+                    .setDriverLicenseIssueDate(newClient.getDriverLicenseIssueDate());
+            return clientRepository.save(clientModel);
+        }
+        return null;
+    }
 
     private Client getClient(String email) {
         return clientRepository.findByEmail(email);
