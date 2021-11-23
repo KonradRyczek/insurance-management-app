@@ -39,4 +39,12 @@ public class ND {
 
 //    @Enumerated(EnumType.STRING)
 //    Floor floor;
+
+
+    @Override
+    public String toString() {
+        return "Nieruchomość Dom - " +
+                "client=" + client.toString() +
+                buildingAddress + " " + insuranceStartDate;
+    }
 }

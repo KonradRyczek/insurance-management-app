@@ -40,4 +40,12 @@ public class OCAC {
         this.vehiclePlate = vehiclePlate;
         this.vehicleYearOfProduction = vehicleYearOfProduction;
     }
+
+    @Override
+    public String toString() {
+        return "OCAC: " +
+                client.toString() + " "
+                + vehiclePlate + " "
+                + vehicleYearOfProduction;
+    }
 }

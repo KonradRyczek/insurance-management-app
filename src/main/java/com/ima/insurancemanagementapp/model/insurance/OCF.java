@@ -41,4 +41,12 @@ public class OCF {
         this.revenue = revenue;
         this.PKD = PKD;
     }
+
+    @Override
+    public String toString() {
+        return "OCF: " +
+                client.toString() + " " +
+                revenue + " " +
+                PKD;
+    }
 }

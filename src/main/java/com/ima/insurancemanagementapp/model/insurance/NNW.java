@@ -32,4 +32,10 @@ public class NNW {
         this.client = client;
         this.insuranceStartDate = insuranceStartDate;
     }
+
+    @Override
+    public String toString() {
+        return "NNW: " +
+                client.toString() + insuranceStartDate;
+    }
 }

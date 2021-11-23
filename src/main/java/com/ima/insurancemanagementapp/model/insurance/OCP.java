@@ -41,4 +41,13 @@ public class OCP {
         this.revenue = revenue;
         this.amountOfVehicles = amountOfVehicles;
     }
+
+    @Override
+    public String toString() {
+        return "OCP: " +
+                client.toString() + " " +
+                revenue + " " +
+                amountOfVehicles + " " +
+                insuranceStartDate;
+    }
 }

@@ -41,4 +41,13 @@ public class OCS {
         this.revenue = revenue;
         this.amountOfVehicles = amountOfVehicles;
     }
+
+    @Override
+    public String toString() {
+        return "OCS: " +
+                client.toString() + " " +
+                revenue + " " +
+                amountOfVehicles + " " +
+                insuranceStartDate;
+    }
 }

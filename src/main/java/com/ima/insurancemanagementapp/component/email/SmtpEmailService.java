@@ -1,4 +1,4 @@
-package com.ima.insurancemanagementapp.email;
+package com.ima.insurancemanagementapp.component.email;
 
 import org.springframework.stereotype.Component;
 

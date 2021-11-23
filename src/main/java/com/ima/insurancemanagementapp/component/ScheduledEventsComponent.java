@@ -1,10 +1,8 @@
 package com.ima.insurancemanagementapp.component;
 
-import com.ima.insurancemanagementapp.email.EmailReminderManager;
+import com.ima.insurancemanagementapp.service.EmailReminderManager;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-
-import java.util.logging.Logger;
 
 @Component
 public class ScheduledEventsComponent {

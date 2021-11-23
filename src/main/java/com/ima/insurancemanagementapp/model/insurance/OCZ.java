@@ -41,6 +41,15 @@ public class OCZ {
         this.revenue = revenue;
         this.PKD = PKD;
     }
+
+    @Override
+    public String toString() {
+        return "OCZ: " +
+                client.toString() +
+                revenue + " " +
+                PKD + " " +
+                insuranceStartDate;
+    }
 }
 
 

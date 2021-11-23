@@ -43,12 +43,9 @@ public class OC {
 
     @Override
     public String toString() {
-        return "OC{" +
-                "OCId=" + OCId +
-                ", client=" + client +
-                ", insuranceStartDate=" + insuranceStartDate +
-                ", vehiclePlate='" + vehiclePlate + '\'' +
-                ", vehicleYearOfProduction=" + vehicleYearOfProduction +
-                '}';
+        return "OC: " +
+                client.toString() + " "
+                + vehiclePlate + " "
+                + vehicleYearOfProduction;
     }
 }

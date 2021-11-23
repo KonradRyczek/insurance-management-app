@@ -39,4 +39,11 @@ public class NM {
 
 //    @Enumerated(EnumType.STRING)
 //    Floor floor;
+
+    @Override
+    public String toString() {
+        return "Nieruchomość Mieszkanie - " +
+                "client=" + client.toString() +
+                buildingAddress + " " + insuranceStartDate;
+    }
 }
