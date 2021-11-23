@@ -1,4 +1,4 @@
-package com.ima.insurancemanagementapp.controller.v1.api;
+package com.ima.insurancemanagementapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

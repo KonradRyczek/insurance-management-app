@@ -11,7 +11,6 @@ corresponds to SQL DATE which means it stores years, months and days while hour,
  Additionally, sql.Date isn't tied to timezones.
  */
 
-@ToString // delete later
 @Getter
 @Setter
 @NoArgsConstructor
@@ -42,5 +41,16 @@ public class Client {
         this.lastName = lastName;
         this.email = email;
         this.driverLicenseIssueDate = driverLicenseIssueDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "clientId=" + clientId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", driverLicenseIssueDate=" + driverLicenseIssueDate +
+                '}';
     }
 }

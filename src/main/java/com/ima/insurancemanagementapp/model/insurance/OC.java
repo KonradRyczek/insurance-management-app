@@ -40,4 +40,15 @@ public class OC {
         this.vehiclePlate = vehiclePlate;
         this.vehicleYearOfProduction = vehicleYearOfProduction;
     }
+
+    @Override
+    public String toString() {
+        return "OC{" +
+                "OCId=" + OCId +
+                ", client=" + client +
+                ", insuranceStartDate=" + insuranceStartDate +
+                ", vehiclePlate='" + vehiclePlate + '\'' +
+                ", vehicleYearOfProduction=" + vehicleYearOfProduction +
+                '}';
+    }
 }

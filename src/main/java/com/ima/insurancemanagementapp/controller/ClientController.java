@@ -1,4 +1,4 @@
-package com.ima.insurancemanagementapp.controller.v1.api;
+package com.ima.insurancemanagementapp.controller;
 
 
 import com.ima.insurancemanagementapp.model.client.Client;
