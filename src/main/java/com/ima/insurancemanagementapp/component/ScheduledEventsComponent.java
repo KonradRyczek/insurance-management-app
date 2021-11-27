@@ -14,19 +14,19 @@ public class ScheduledEventsComponent {
     }
 
     // TODO: add a logger class to the project.
-    //private static final Logger LOGGER = Logger.getLogger(EventCreator.class.getName() );
+    // private static final Logger LOGGER = Logger.getLogger(EventCreator.class.getName() );
 
     @Scheduled(cron = "0 0 8 * * ?")
     public void startReminderProcess() {
-        // TODO: create neccesary methods in order to implement scheduled email reminders.
+        // TODO: start this process whith a summary of reminders.
         emailReminderManager.sendReminders();
     }
 
 
-    @Scheduled(cron = "30 * * * * *")
-    public void test(){
-        emailReminderManager.sendReminders();
-   }
+//    @Scheduled(cron = "30 * * * * *")
+//    public void test(){
+//        emailReminderManager.sendReminders();
+//   }
 
 
 }
