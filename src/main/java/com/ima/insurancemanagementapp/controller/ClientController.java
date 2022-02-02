@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+
 import java.util.ArrayList;
 
 @Controller
@@ -31,11 +32,18 @@ public class ClientController {
         return "redirect:/klienci";
     }
 
-    @GetMapping("/usunKlienta/{clientId}")
+    @GetMapping("/klienci/usunKlienta/{clientId}")
     public String deleteStudent(@PathVariable(value = "clientId") Long clientId) {
-        clientService.deleteClient(clientId);
-        return "redirect:/klienci";
+        try {
+            clientService.deleteClient(clientId);
+            return "redirect:/klienci";
+        } catch (Exception e) {
+            return "redirect:/klienci";
+        }
+
     }
+
+
 
 
 
