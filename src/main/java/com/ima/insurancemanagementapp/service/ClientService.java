@@ -5,6 +5,7 @@ import com.ima.insurancemanagementapp.repository.client.ClientRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -27,7 +28,7 @@ public class ClientService {
         return null; //this client already exists
     }
 
-    public void deleteClient(Long clientId) {
+    public void deleteClient(Long clientId) throws SQLException {
         Client client = clientRepository.getById(clientId);
         if (client != null) {
             //System.out.println("Delete by clientid: clientId= "+clientId);
