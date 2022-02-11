@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="#" th:action="@{/edytujKlienta}" th:object="${client}" method="post">
+        <div>
+            <div style="padding: 10px">
+                <label>Imię:</label>
+                <input type="text" class="form-control" th:field="*{firstName}" required/>
+            </div>
+            <div style="padding: 10px">
+                <label>Nazwisko:</label>
+                <input type="text" class="form-control" th:field="*{lastName}" required/>
+            </div>
+            <div style="padding: 10px">
+                <label>Email:</label>
+                <input type="text" class="form-control" th:field="*{email}" required/>
+            </div>
+            <div style="padding: 10px">
+                <label>Data wydania prawa jazdy:</label>
+                <input type="date" class="form-control" th:field="*{driverLicenseIssueDate}"/>
+            </div>
+        </div>
+        <button type="submit">Dodaj</button>
+    </form>
+</body>
+</html>

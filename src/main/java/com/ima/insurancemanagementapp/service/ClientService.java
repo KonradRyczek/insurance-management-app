@@ -36,20 +36,18 @@ public class ClientService {
         }
     }
 
-
-//
-//    public Client updateClient(String email, Client newClient) {
-//        Optional<Client> client = Optional.ofNullable(clientRepository.findByEmail(email));
-//        if (client.isPresent()) {
-//            Client clientModel = client.get();
-//            clientModel.setFirstName(newClient.getFirstName())
-//                    .setLastName(newClient.getLastName())
-//                    .setEmail(newClient.getEmail())
-//                    .setDriverLicenseIssueDate(newClient.getDriverLicenseIssueDate());
-//            return clientRepository.save(clientModel);
-//        }
-//        return null;
-//    }
+    public Client editClient(String email, Client newClient) {
+        Optional<Client> client = Optional.ofNullable(clientRepository.findByEmail(email));
+        if (client.isPresent()) {
+            Client clientModel = client.get();
+            clientModel.setFirstName(newClient.getFirstName())
+                    .setLastName(newClient.getLastName())
+                    .setEmail(newClient.getEmail())
+                    .setDriverLicenseIssueDate(newClient.getDriverLicenseIssueDate());
+            return clientRepository.save(clientModel);
+        }
+        return null;
+    }
 
     public ClientService(ClientRepository clientRepository) {
         this.clientRepository = clientRepository;
