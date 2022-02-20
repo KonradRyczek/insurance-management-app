@@ -19,6 +19,14 @@ public class ClientService {
         return new ArrayList<>(clientRepository.findAll());
     }
 
+    public Client findClientByEmail(String email) {
+        Optional<Client> client = Optional.ofNullable(clientRepository.findByEmail(email));
+        if (client.isPresent()) {
+            return client.get();
+        }
+        return null;
+    }
+
     public Client addClient(Client clientToAdd) {
         Client client = getClient(clientToAdd.getEmail());
         if (client == null) {

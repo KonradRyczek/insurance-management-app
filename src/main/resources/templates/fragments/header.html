@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="header">
+        <div class="collapse navbar-collapse">
+            <a class="navbar-brand mx-3" href="#">Inkubator Rozwoju Biznesu</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Polisy
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="OC">OC</a>
+                        <a class="dropdown-item" href="OCAC">OCAC</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="ND">Nieruchomość dom</a>
+                        <a class="dropdown-item" href="NM">Nieruchomość mieszkanie</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="NNW">Ubz następstw nieszczęśliwych</a>
+                        <a class="dropdown-item" href="OCF">OCF</a>
+                        <a class="dropdown-item" href="OCP">OCP</a>
+                        <a class="dropdown-item" href="OCS">OCS<</a>
+                        <a class="dropdown-item" href="OCZ">OCZ</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="klienci">Klienci</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</html>
+
+<!--<div class="navbar navbar-inverse navbar-fixed-top" >-->
+
+<!--    <div class="container">-->
+<!--        <div class="navbar-header">-->
+<!--            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">-->
+<!--                <span class="icon-bar"></span>-->
+<!--                <span class="icon-bar"></span>-->
+<!--                <span class="icon-bar"></span>-->
+<!--            </button>-->
+<!--            <a class="navbar-brand" href="#">My project</a>-->
+<!--        </div>-->
+<!--        <div class="navbar-collapse collapse">-->
+<!--            <ul class="nav navbar-nav">-->
+<!--                <li th:classappend="${module == 'home' ? 'active' : ''}">-->
+<!--                    <a href="#" th:href="@{/}">Home</a>-->
+<!--                </li>-->
+<!--                <li th:classappend="${module == 'tasks' ? 'active' : ''}">-->
+<!--                    <a href="#" th:href="@{/task}">Tasks</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <ul class="nav navbar-nav navbar-right">-->
+<!--                &lt;!&ndash;                <li th:if="${#authorization.expression('!isAuthenticated()')}">&ndash;&gt;-->
+<!--                <a href="/signin" th:href="@{/signin}">-->
+<!--                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in-->
+<!--                </a>-->
+<!--                &lt;!&ndash;                </li>&ndash;&gt;-->
+<!--                &lt;!&ndash;                <li th:if="${#authorization.expression('isAuthenticated()')}">&ndash;&gt;-->
+<!--                <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">-->
+<!--                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout-->
+<!--                </a>-->
+<!--                &lt;!&ndash;                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>&ndash;&gt;-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

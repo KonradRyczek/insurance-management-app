@@ -36,9 +36,10 @@ public class DataLoader implements ApplicationRunner {
         */
 
         Client c = clientRepository.save(new Client("Mona", "Gerges", "mona@email.com", LocalDate.now()));
+        clientRepository.save(new Client("Alczan", "Potasu", "alpo@.com", LocalDate.now()));
 
-        ocRepository.save(new OC(c, LocalDate.now(), "plate", 1999));
-        ocRepository.save(new OC(c, LocalDate.now(), "plate", 1999));
+        ocRepository.save(new OC(c, LocalDate.now(), "SG0032W", 1999));
+        ocRepository.save(new OC(c, LocalDate.now(), "SK02344", 1999));
     }
 }
 
