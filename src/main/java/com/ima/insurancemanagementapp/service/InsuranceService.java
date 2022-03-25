@@ -76,69 +76,69 @@ public class InsuranceService {
         return nnw;
     }
 
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
-    public ND deleteND(Long ndId) throws SQLException {
-        ND nd = ndRepository.getById(ndId);
-        if (nd != null) {
-            ndRepository.deleteById(ndId);
-        }
-        return nd;
-    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
+//    public ND deleteND(Long ndId) throws SQLException {
+//        ND nd = ndRepository.getById(ndId);
+//        if (nd != null) {
+//            ndRepository.deleteById(ndId);
+//        }
+//        return nd;
+//    }
 
 
     public ArrayList<OC> getAllOC() {
